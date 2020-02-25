@@ -19,11 +19,19 @@
     //formula for calculating BMI:
     //BMI = (Weight in Pounds / (Height in inches x Height in inches)) x 703
     //source: http://www.bmi-calculator.net/bmi-formula.php
+        function BmiValue(){
+            global $weight,$height;
 
-    $BMI_VALUE=($weight/($height*$height))*703 ;
-    if ($BMI_VALUE <18){ 
+            return ($weight/($height*$height))*703 ;
+
+        }
+
+
+
+   // $BMI_VALUE=($weight/($height*$height))*703 ;
+    if (BmiValue() <18){ 
         $LABEL_VALUE="Underweight";
-    } else if ($BMI_VALUE >30){
+    } else if (BmiValue() >30){
         $LABEL_VALUE="Obese";
     }else {
         $LABEL_VALUE="Normal";
@@ -32,8 +40,10 @@
 ?>
 
 
+
+<h1>BMI Calculation</h1>
 <h1>BMI Calculation</h1>
 
-<p id="output-here">"Your BMI is <?php echo  $BMI_VALUE?>, which is considered  <?php echo  $LABEL_VALUE?> !"</p>
+<p id="output-here">"Your BMI is <?php echo  BmiValue() ?>, which is considered  <?php echo  $LABEL_VALUE?> !"</p>
 
 </body>
