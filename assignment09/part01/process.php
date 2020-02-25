@@ -40,6 +40,8 @@
 ?>
 
 
+
+<h1>BMI Calculation</h1>
 <h1>BMI Calculation</h1>
 
 <p id="output-here">"Your BMI is <?php echo  BmiValue() ?>, which is considered  <?php echo  $LABEL_VALUE?> !"</p>
